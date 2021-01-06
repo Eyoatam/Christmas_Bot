@@ -3,6 +3,6 @@ logs
 yarn-debug.log*
 yarn-error.log*
 node_modules/
-*.config.js
 .env
 dist/
+coverage/
