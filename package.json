@@ -39,7 +39,7 @@
 	},
 	"gitHooks": {
 		"pre-commit": "lint-staged",
-		"commit-msg": "node dist/scripts/verifyCommit.js"
+		"commit-msg": "node scripts/verifyCommit.js"
 	},
 	"bugs": {
 		"url": "https://github.com/Eyoatam/ChristMas_Bot/issues"
