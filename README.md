@@ -17,7 +17,19 @@ A telegram bot for suggesting christmas messages and sharing them with your frie
   yarn start || npm start
 
 # Start The Bot
-  yarn start:bot or npm run start:bot
+  yarn start:bot || npm run start:bot
 
 # Lint files
+  yarn lint || npm run lint
+
+# start dev server
+  yarn dev || npm run dev
+
+# start dev server for the bot
+  yarn dev:bot || npm run dev:bot
  ```
+### enviroment variables
+  ```bash
+    BOT_TOKEN=Your Bot Token
+    MONGO_ATLAS_PASSWORD=Your atlas password
+  ````
