@@ -9,7 +9,8 @@
 		"dev": "nodemon server.ts",
 		"dev:bot": "nodemon controllers/botControllers/BotMessage.ts",
 		"build": "tsc",
-		"lint": "prettier \"*.ts\" \"controllers/**/*.ts\" \"routes/**/*.ts\" \"models/**/*.ts\" --write"
+		"lint": "prettier \"*.ts\" \"controllers/**/*.ts\" \"routes/**/*.ts\" --write",
+		"cool": "husky install"
 	},
 	"author": "Eyoatam Tamirat",
 	"license": "ISC",
@@ -40,11 +41,19 @@
 		"ts-jest": "^26.4.4",
 		"yorkie": "^2.0.0"
 	},
+	"bugs": {
+		"url": "https://github.com/Eyoatam/ChristMas_Bot/issues"
+	},
+	"homepage": "https://github.com/Eyoatam/ChristMas_Bot",
 	"gitHooks": {
 		"pre-commit": "lint-staged",
 		"commit-msg": "node scripts/verifyCommit.js"
 	},
 	"lint-staged": {
+		"*.vue": [
+			"prettier --write",
+			"git add"
+		],
 		"*.md": [
 			"prettier --write",
 			"git add"
@@ -57,9 +66,5 @@
 			"prettier --parser=typescript --write",
 			"git add"
 		]
-	},
-	"bugs": {
-		"url": "https://github.com/Eyoatam/ChristMas_Bot/issues"
-	},
-	"homepage": "https://github.com/Eyoatam/ChristMas_Bot"
+	}
 }
