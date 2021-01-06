@@ -41,10 +41,6 @@
 		"ts-jest": "^26.4.4",
 		"yorkie": "^2.0.0"
 	},
-	"bugs": {
-		"url": "https://github.com/Eyoatam/ChristMas_Bot/issues"
-	},
-	"homepage": "https://github.com/Eyoatam/ChristMas_Bot",
 	"gitHooks": {
 		"pre-commit": "lint-staged",
 		"commit-msg": "node scripts/verifyCommit.js"
@@ -66,5 +62,9 @@
 			"prettier --parser=typescript --write",
 			"git add"
 		]
-	}
+	},
+	"bugs": {
+		"url": "https://github.com/Eyoatam/ChristMas_Bot/issues"
+	},
+	"homepage": "https://github.com/Eyoatam/ChristMas_Bot"
 }
