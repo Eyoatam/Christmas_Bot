@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 import { Request, Response, Application, NextFunction } from "express";
 
 import messageRoutes from "./routes/MessageRoutes";
+import telegramBotRoutes from "./routes/telegramBotRoutes";
 
 dotenv.config();
 const app: Application = express();
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/messages", messageRoutes);
+app.use("/telegram_message", telegramBotRoutes);
 
 app.use((req, res, next) => {
 	const error = new Error("Not Found");
