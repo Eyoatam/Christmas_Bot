@@ -9,8 +9,7 @@
 		"dev": "nodemon server.ts",
 		"dev:bot": "nodemon controllers/botControllers/BotMessage.ts",
 		"build": "tsc",
-		"lint": "prettier \"*.ts\" \"controllers/**/*.ts\" \"routes/**/*.ts\" --write",
-		"cool": "husky install"
+		"lint": "prettier \"*.ts\" \"controllers/**/*.ts\" \"routes/**/*.ts\" --write"
 	},
 	"author": "Eyoatam Tamirat",
 	"license": "ISC",
