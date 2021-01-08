@@ -1,4 +1,5 @@
 # Christmas_Bot
+
 A telegram bot for suggesting christmas messages and sharing them with your friends
 
 ## Project Setup
@@ -6,10 +7,10 @@ A telegram bot for suggesting christmas messages and sharing them with your frie
 ```bash
 # Clone the repo
   git clone git@github.com:Eyoatam/Christmas_Bot.git || gh repo clone Eyoatam/Christmas_Bot
-  
+
 # navigate to project directory
   cd Christmas_Bot
- 
+
 # Install Dependencies
   yarn install || npm install
 
@@ -27,9 +28,15 @@ A telegram bot for suggesting christmas messages and sharing them with your frie
 
 # start dev server for the bot
   yarn dev:bot || npm run dev:bot
- ```
+```
+
 ### enviroment variables
-  ```bash
-    BOT_TOKEN=Your Bot Token
-    MONGO_ATLAS_PASSWORD=Your atlas password
-  ````
+
+```bash
+  BOT_TOKEN=Your Bot Token
+  MONGO_ATLAS_PASSWORD=Your atlas password
+```
+
+## License
+
+This code is licensed under [MIT](https://github.com/Eyoatam/Christmas_Bot/blob/master/LICENSE)
