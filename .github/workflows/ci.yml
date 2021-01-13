@@ -1,4 +1,4 @@
-name: CI
+name: Christmas-bot-ci
 
 on:
   push:
