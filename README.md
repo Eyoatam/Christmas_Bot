@@ -1,7 +1,5 @@
 # Christmas_Bot
 
-A telegram bot for suggesting christmas messages and sharing them with your friends
-
 ## Project Setup
 
 > Note: If You Are Using `npm` You Should delete the `yarn.lock` file
