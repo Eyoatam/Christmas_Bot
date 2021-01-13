@@ -4,6 +4,8 @@ A telegram bot for suggesting christmas messages and sharing them with your frie
 
 ## Project Setup
 
+> Note: If You Are Using `npm` You Should delete the `yarn.lock` file
+
 ```bash
 # Clone the repo
   git clone git@github.com:Eyoatam/Christmas_Bot.git || gh repo clone Eyoatam/Christmas_Bot
