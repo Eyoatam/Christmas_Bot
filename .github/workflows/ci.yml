@@ -38,7 +38,3 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --frozen-lockfile
       - run: yarn test
-        
-      - uses: codecov/codecov-action@v1
-        with:
-          file: ./coverage/coverage-final.json
