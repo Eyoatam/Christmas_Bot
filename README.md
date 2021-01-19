@@ -1,8 +1,11 @@
 # Christmas_Bot
 
-A telegram bot for suggesting christmas messages and sharing them with your friends
+![CI](https://github.com/znck/vue-developer-experience/workflows/CI/badge.svg)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Project Setup
+
+> Note: If You Are Using `npm` You Should delete the `yarn.lock` file
 
 ```bash
 # Clone the repo
