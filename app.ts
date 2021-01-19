@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import morgan from "morgan";
 import mongoose from "mongoose";
-import { Request, Response, Application, NextFunction } from "express";
+import { Application, NextFunction, Request, Response } from "express";
 
 import messageRoutes from "./routes/MessageRoutes";
 import telegramBotRoutes from "./routes/telegramBotRoutes";
@@ -16,7 +16,7 @@ mongoose.connect(
   "mongodb+srv://ChristmasBotAdmin:" +
     process.env.MONGO_ATLAS_PASSWORD +
     "@christmasbot.7ifob.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  { useUnifiedTopology: true, useNewUrlParser: true }
+  { useUnifiedTopology: true, useNewUrlParser: true },
 );
 
 app.use(cors());
