@@ -1,6 +1,6 @@
 # Christmas_Bot
 
-![CI](https://github.com/znck/vue-developer-experience/workflows/CI/badge.svg)
+![CI](https://github.com/Eyoatam/Christmas_Bot/workflows/CI/badge.svg)
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Project Setup
