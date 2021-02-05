@@ -1,7 +1,7 @@
 import axios from "axios";
 import axiosRequest from "../utils/request";
 
-describe("Test BotRequest", () => {
+describe("Test AxiosRequest", () => {
 	it("should send request", () => {
 		const request = new axiosRequest();
 		request.send({

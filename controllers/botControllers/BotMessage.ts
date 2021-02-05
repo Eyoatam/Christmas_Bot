@@ -14,12 +14,11 @@ interface BotContext extends Context {
 
 const bot = new Telegraf<BotContext>(process.env.BOT_TOKEN);
 
-bot.use((ctx, next) => {
+bot.use(async (_ctx, next) => {
 	const start = Date.now();
-	return next().then(() => {
-		const ms = Date.now() - start;
-		console.log("response time %sms", ms);
-	});
+	await next();
+	const ms = Date.now() - start;
+	console.log("response time %sms", ms);
 });
 
 bot.start((ctx) => {
