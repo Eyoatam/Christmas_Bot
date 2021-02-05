@@ -47,30 +47,40 @@ bot.help((ctx) => {
 });
 
 bot.command("getmessage", (ctx) => {
-	sendRequest.send("http://localhost:3000/messages", function (response: any) {
-		const randomMessage = Math.floor(
-			Math.random() * response.data.messages.length
-		);
-		ctx.reply(
-			response.data.messages[randomMessage].message,
-			Extra.markup((markup: any) => {
-				return markup.resize().keyboard([["🔙 Main Menu"], ["💬 Get Message"]]);
-			})
-		);
+	sendRequest.send({
+		url: "http://localhost:3000/messages",
+		callback: function (response: any) {
+			const randomMessage = Math.floor(
+				Math.random() * response.data.messages.length
+			);
+			ctx.reply(
+				response.data.messages[randomMessage].message,
+				Extra.markup((markup: any) => {
+					return markup
+						.resize()
+						.keyboard([["🔙 Main Menu"], ["💬 Get Message"]]);
+				})
+			);
+		},
 	});
 });
 
 bot.hears("💬 Get Message", (ctx) => {
-	sendRequest.send("http://localhost:3000/messages", function (response: any) {
-		const randomMessage = Math.floor(
-			Math.random() * response.data.messages.length
-		);
-		ctx.reply(
-			response.data.messages[randomMessage].message,
-			Extra.markup((markup: any) => {
-				return markup.resize().keyboard([["🔙 Main Menu"], ["💬 Get Message"]]);
-			})
-		);
+	sendRequest.send({
+		url: "http://localhost:3000/messages",
+		callback: function (response: any) {
+			const randomMessage = Math.floor(
+				Math.random() * response.data.messages.length
+			);
+			ctx.reply(
+				response.data.messages[randomMessage].message,
+				Extra.markup((markup: any) => {
+					return markup
+						.resize()
+						.keyboard([["🔙 Main Menu"], ["💬 Get Message"]]);
+				})
+			);
+		},
 	});
 });
 

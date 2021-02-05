@@ -2,7 +2,7 @@ import axios from "axios";
 
 class axiosRequest {
 	constructor() {}
-	send(url: string, callback: any) {
+	send({ url, callback }: { url: string; callback: any }) {
 		axios
 			.get(url)
 			.then(callback)
