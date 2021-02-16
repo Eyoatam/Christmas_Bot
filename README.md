@@ -36,10 +36,11 @@
 ### enviroment variables
 
 ```bash
-  BOT_TOKEN=Your Bot Token
+BOT_TOKEN=Your Bot Token
   MONGO_ATLAS_PASSWORD=Your atlas password
 ```
 
 ## License
 
-This code is licensed under [MIT](https://github.com/Eyoatam/Christmas_Bot/blob/master/LICENSE)
+This code is licensed under
+[MIT](https://github.com/Eyoatam/Christmas_Bot/blob/master/LICENSE)

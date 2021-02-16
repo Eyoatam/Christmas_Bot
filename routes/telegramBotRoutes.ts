@@ -21,7 +21,7 @@ router.post("/", (req, res, next) => {
           result: body,
         });
       }
-    }
+    },
   );
 });
 
