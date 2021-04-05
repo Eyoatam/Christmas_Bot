@@ -1,7 +1,6 @@
 import axios from "axios";
 
-class axiosRequest {
-  constructor() {}
+export default class axiosRequest {
   send({ url, callback }: { url: string; callback: any }) {
     axios
       .get(url)
@@ -14,5 +13,3 @@ class axiosRequest {
       });
   }
 }
-
-export default axiosRequest;

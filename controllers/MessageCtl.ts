@@ -2,8 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
 import Message from "../models/Messgae";
 
-class MessageCtl {
-  constructor() {}
+export default class MessageCtl {
   getMessages(_req: Request, res: Response, _next: NextFunction) {
     Message.find()
       .select("message _id created_at")
@@ -13,7 +12,7 @@ class MessageCtl {
           messages,
         });
       })
-      .catch((error) => {
+      .catch((error: Error) => {
         res.status(500).json({
           error: {
             message: error.message,
@@ -21,6 +20,7 @@ class MessageCtl {
         });
       });
   }
+
   getMessage(req: Request, res: Response, _next: NextFunction) {
     Message.findById(req.params.id)
       .select("_id message created_at")
@@ -39,6 +39,7 @@ class MessageCtl {
         }
       });
   }
+  // @ts-ignore
   addNewMessage(req: Request, res: Response, _next: NextFunction) {
     const message = new Message({
       _id: mongoose.Types.ObjectId(),
@@ -50,13 +51,14 @@ class MessageCtl {
         res.status(201).json({
           createdMessage: {
             _id: result._id,
-            // @ts-ignore
+            //@ts-ignore
             message: result.message,
           },
         });
       })
-      .catch((error) => console.log(error));
+      .catch((error: Error) => console.log(error));
   }
+
   deleteMessage(req: Request, res: Response, _next: NextFunction) {
     Message.deleteOne({ _id: req.params.id })
       .exec()
@@ -66,7 +68,7 @@ class MessageCtl {
           id: req.params.id,
         });
       })
-      .catch((error: any) => {
+      .catch((error: Error) => {
         res.status(500).json({
           error: {
             message: error.message,
@@ -75,5 +77,3 @@ class MessageCtl {
       });
   }
 }
-
-export default MessageCtl;

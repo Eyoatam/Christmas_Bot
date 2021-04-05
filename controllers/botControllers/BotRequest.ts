@@ -1,6 +1,6 @@
 import request from "request";
 
-class BotRequest {
+export default class BotRequest {
   private _telegram_api: string;
   public get telegram_api(): string {
     return this._telegram_api;
@@ -20,8 +20,8 @@ class BotRequest {
     callback,
   }: {
     method: string;
-    jsonObject: Object;
-    callback: Function;
+    jsonObject: Record<string, unknown>;
+    callback: (error: any, response: any, body: any) => void;
   }) {
     const api_url = this.telegram_bot_api + "/" + method;
     const options = {
@@ -34,5 +34,3 @@ class BotRequest {
     });
   }
 }
-
-export default BotRequest;

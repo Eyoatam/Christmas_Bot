@@ -2,7 +2,7 @@ import BotRequest from "./BotRequest";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-class BotController {
+export default class BotController {
   botAPi: any;
   constructor() {
     this.botAPi = new BotRequest(process.env.BOT_TOKEN);
@@ -29,5 +29,3 @@ class BotController {
     }
   }
 }
-
-export default BotController;
