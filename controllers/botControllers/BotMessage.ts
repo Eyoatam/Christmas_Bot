@@ -25,7 +25,7 @@ bot.start((ctx: Context) => {
         .resize()
         .keyboard([["💬 Get Message", , "💡 Help"], ["👥 About Us"]])
         .oneTime();
-    }),
+    })
   );
 });
 
@@ -41,7 +41,7 @@ bot.help((ctx: Context) => {
         .resize()
         .keyboard([["🔙 Main Menu"], ["💬 Get Message"]])
         .oneTime();
-    }),
+    })
   );
 });
 
@@ -50,7 +50,7 @@ bot.command("getmessage", (ctx: Context) => {
     url: "http://localhost:3000/messages",
     callback: (response: AxiosResponse) => {
       const randomMessage = Math.floor(
-        Math.random() * response.data.messages.length,
+        Math.random() * response.data.messages.length
       );
       ctx.reply(
         response.data.messages[randomMessage].message,
@@ -58,7 +58,7 @@ bot.command("getmessage", (ctx: Context) => {
           return markup
             .resize()
             .keyboard([["🔙 Main Menu"], ["💬 Get Message"]]);
-        }),
+        })
       );
     },
   });
@@ -69,7 +69,7 @@ bot.hears("💬 Get Message", (ctx: Context) => {
     url: "http://localhost:3000/messages",
     callback: (response: AxiosResponse) => {
       const randomMessage = Math.floor(
-        Math.random() * response.data.messages.length,
+        Math.random() * response.data.messages.length
       );
       ctx.reply(
         response.data.messages[randomMessage].message,
@@ -77,7 +77,7 @@ bot.hears("💬 Get Message", (ctx: Context) => {
           return markup
             .resize()
             .keyboard([["🔙 Main Menu"], ["💬 Get Message"]]);
-        }),
+        })
       );
     },
   });
@@ -94,7 +94,7 @@ bot.hears("🔙 Main Menu", (ctx: Context) => {
         .resize()
         .keyboard([["💬 Get Message", , "💡 Help"], ["👥 About Us"]])
         .oneTime();
-    }),
+    })
   );
 });
 
@@ -110,7 +110,7 @@ bot.hears("💡 Help", (ctx: Context) => {
         .resize()
         .keyboard([["🔙 Main Menu"], ["💬 Get Message"]])
         .oneTime();
-    }),
+    })
   );
 });
 
@@ -126,7 +126,7 @@ bot.hears("👥 About Us", (ctx: Context) => {
         .resize()
         .keyboard([["🔙 Main Menu"], ["💡 Help"]])
         .oneTime();
-    }),
+    })
   );
 });
 

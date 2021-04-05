@@ -23,7 +23,7 @@ export default router.post(
             result: body,
           });
         }
-      },
+      }
     );
-  },
+  }
 );

@@ -16,7 +16,7 @@ mongoose.connect(
   "mongodb+srv://ChristmasBotAdmin:" +
     process.env.MONGO_ATLAS_PASSWORD +
     "@christmasbot.7ifob.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  { useUnifiedTopology: true, useNewUrlParser: true },
+  { useUnifiedTopology: true, useNewUrlParser: true }
 );
 
 app.use(cors());

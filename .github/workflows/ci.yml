@@ -23,7 +23,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
 
-  test:
+  lint:
     runs-on: ubuntu-latest
 
     strategy:
@@ -37,4 +37,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --frozen-lockfile
-      - run: yarn test
+      - run: yarn lint

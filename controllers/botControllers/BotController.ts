@@ -19,7 +19,7 @@ export default class BotController {
         sentMessage,
         (error: any, response: any, body: any) => {
           callback(error, response, body);
-        },
+        }
       );
     } else {
       callback(`
